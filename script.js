@@ -17,6 +17,7 @@ const gameAbout = document.getElementById("gameAbout");
 const meAbout = document.getElementById("meAbout");
 const overlay = document.querySelector(".overlay");
 const closeModalX = document.getElementById("closeModalX");
+const closeModalOptions = document.getElementById('closeModalOptions')
 
 //FUNCTION TO OPEN THE MODAL
 const openModal = (x) => {
@@ -33,9 +34,9 @@ const openModal = (x) => {
 
 //FUNCTION TO CLOSE THE MODAL
 const closeModal = () => {
-  modal.classList.add("hidden");
   buttons.classList.add("hidden");
   overlay.classList.add("hidden");
+  modal.classList.add("hidden");
 };
 
 //FUNCTION TO CLOSE THE MODEL CLICKING "ESC" KEY
@@ -55,6 +56,7 @@ menu.addEventListener("click", openButtons);
 meAbout.addEventListener("click", () => openModal("me"));
 gameAbout.addEventListener("click", () => openModal("game"));
 closeModalX.addEventListener("click", closeModal);
+closeModalOptions.addEventListener('click', closeModal);
 
 //GAME CODE
 
